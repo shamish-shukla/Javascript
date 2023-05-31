@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript-Task-3</title>
+    <head>
+        <style>
+            .first-rows input{
+                margin-left: 50px;
+                border: 3px solid red;
+            }
+            .second-rows input{
+                margin-left: 50px;
+                border: 3px solid red;
+            }
+            .third-rows input{
+                margin-left: 37px;
+                border: 3px solid red;
+            }
+            .fourth-rows textarea{
+                margin-left: 33px;
+                border: 3px solid red;
+            }
+            button{
+                margin-left: 95px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-columns">
+            <div class="first-rows">
+                <label>Name:</label>
+                <input id="name" type="text" />
+                <br><br>
+            </div>
+            <div class="second-rows">
+                <label>Email:</label>
+                <input id="email" type="email" />
+                <br><br>
+            </div>
+            <div class="third-rows">
+                <label>Website:</label>
+                <input id="url" type="url" />
+                <br><br>
+            </div>
+            <div class="fourth-rows">
+                <label>Message:</label>
+                <span>
+                    <textarea id="message"></textarea>
+                </span>
+                <br><br>
+            </div>   
+            <button onClick="checkdata()">Submit</button>
+            </div>
+        </div>
+        <script>
+            
+            function checkdata()
+            {
+                var name1 = document.getElementById("name").value;
+                var email1 = document.getElementById("email").value;
+                var url1 = document.getElementById("url").value;
+                var message1 = document.getElementById("message").value;
+                if(name1 == "")
+                {
+                    console.log("Name Field is required");
+                }
+                if(email == "" )
+                {
+                    console.log("A valid Email address is required");
+                }
+                if(url ==  "")
+                {
+                    console.log("Url Field is required");
+                }
+                if(message1 == "")
+                {
+                    console.log("message field is required");
+                }
+            }
+        </script>
+    </body>
+</html>

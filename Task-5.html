@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript-Task-5</title>
+    <head></head>
+    <body>
+        Enter the Number: <input type="text" id="num"/>
+        <button onclick="cal()">Reverse Number</button>
+        <p id="result"></p>
+        <script>
+            function cal()
+            {
+                let a = document.getElementById("num").value;
+                let rev_num = 0;
+                while(a!=0)
+                {
+                   rev_num = rev_num*10 + a%10;
+                   a = Math.floor(a/10);
+                }
+                document.getElementById("result").innerHTML = rev_num;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript-Task-6</title>
+    <head></head>
+    <body>
+        Enter the String: <input type="text" id="data"/>
+        <button onclick="arrange()">Arrange</button>
+        <p id="result"></p>
+        <script>
+            function arrange()
+            {
+                let s = document.getElementById("data").value;
+                let b = s.split('').sort().join('');
+                document.getElementById("result").innerHTML = b;
+            }
+        </script>
+    </body>
+</html>

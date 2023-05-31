@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript-Task-2</title>
+    <head>
+        <style>
+            .calculator{
+                border: 1px solid black;
+                width: 270px;
+                padding: 10px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <label>1st Number:</label>
+            <input type="number" id="num1"/>
+            <br>
+            <label>2nd Number:</label>
+            <input type="number" id="num2"/>
+            <br>
+            <button onclick="mul()">Multiply</button>
+            <button onclick="div()">Divide</button>
+            <br>
+            <span id="demo1"></span>
+            <span id="demo"></span>
+        </div>
+        <script>
+            function mul()
+            {
+                const a = document.getElementById("num1").value;
+                const b = document.getElementById("num2").value;
+                document.getElementById("demo1").innerHTML = "The Result Is:";
+                document.getElementById("demo").innerHTML = a*b;
+            }
+            function div()
+            {
+                const a = document.getElementById("num1").value;
+                const b = document.getElementById("num2").value;
+                document.getElementById("demo").innerHTML = a/b;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript-Task-4</title>
+        <style>
+            .main-body{
+                background-color: goldenrod;
+                width:300px;
+                padding:20px;
+                height:200px;
+            }
+            .main-body h2{
+                margin-left:90px;
+                margin-top:0px;
+            }
+            .main-body input{
+                margin-left: 15px;
+                width:250px;
+                padding:5px;
+            }
+            .main-body button{
+                padding:8px;
+                margin-left: 15px;
+                background-color: blue;
+                color: white;
+                border: 0px;
+                width: 263px;
+            }
+            .first-data{
+                margin-top: 5px;
+                display: inline-flex;
+            }
+            .first-data input{
+                width: 10px;
+            }
+            .first-data a{
+                margin-left: 35px;
+            }
+            p{
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-body">
+            <h2><I>Instagram</I></h2>
+            <input type="text" id="user" placeholder="Username" />
+            <br><br>
+            <input type="password" id="pass" placeholder="Password" />
+            <br><br>
+            <button onClick="result()">Login</button>
+            <div class="first-data">
+                <input class="first-data" type="checkbox" />Remember me
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <p>Don't have an account! <a href="#">Sign up here.</a></p>
+        <p id="demo"> </p>
+        <script>
+            function result()
+            {
+                var uname1 = document.getElementById("user").value;
+                var pass1 = document.getElementById("pass").value;
+                //document.getElementById("demo").innerHTML = uname1+" "+pass1;
+                alert("Your username is "+uname1+" and your password is "+pass1);
+            }
+        </script>
+    </body>
+</html>

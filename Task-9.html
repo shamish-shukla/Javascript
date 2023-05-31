@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript-Task-9</title>
+    <head>
+        <style>
+            .main-body{
+                background-color: brown;
+                margin: 5px;
+                padding: 20px;
+                width: 400px;
+            }
+            label{
+                color: white;
+            }
+            .first-rows input{
+                margin-left: 70px;
+            }
+            .second-rows input{
+                margin-left: 70px;
+            }
+            .third-rows input{
+                margin-left: 45px;
+            }
+            .fourth-rows input{
+                margin-left: 10px;
+            }
+            .fifth-rows input{
+                margin-left: 58px;
+            }
+            .sixth-rows select{
+                margin-left: 33px;
+            }
+            .seventh-rows input{
+                margin-left: 40px;
+            }
+            .eigth-rows input{
+                margin-left: 60px;
+            }
+            button{
+                color: black;
+                background-color: white;
+                border:0px;
+                width: 180px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-body">
+            <div class="first-rows">
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="your name" />
+                <br><br>
+            </div>
+            <div class="second-rows">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="your email" />
+                <br><br>
+            </div>
+            <div class="third-rows">
+                <label>Password:</label>
+                <input type="password" id="pass"/>
+                <br><br>
+            </div>
+            <div class="fourth-rows">
+                <label>Phone Number:</label>
+                <input type="text" id="phone"/>
+                <br><br>
+            </div>
+            <div class="fifth-rows">
+                <label>Gender:</label>
+                <input type="checkbox" id="gender"/>Male
+                <input type="checkbox" id="gender"/>Female
+                <br><br>
+            </div>
+            <div class="sixth-rows">
+                <label>Lanaguage:</label>
+                <select id="Lanaguage">
+                    <option>Select Language</option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                </select>
+                <br><br>
+            </div>
+            <div class="seventh-rows">
+                <label>Zip Code:</label>
+                <input type="text" id="zip"/>
+                <br><br>
+            </div>
+            <div class="eigth-rows">
+                <label>About:</label>
+                <input type="text" placeholder="Write about Yourself"  id="information"/>
+                <br><br>
+            </div>
+            <button onClick="info()">Register</button>
+        </div>
+        <script>
+            function info()
+            {
+                var name1 = document.getElementById("name").value;
+                var email1 = document.getElementById("email").value;
+                var pass1 = document.getElementById("pass").value;
+                var phone1 = document.getElementById("phone").value;
+                var gender1 = document.getElementById("gender").value;
+                var lang1 = document.getElementById("Lanaguage").value;
+                var zip1 = document.getElementById("zip").value;
+                var info1 = document.getElementById("information").value;
+                alert(name1+" "+email1+" "+pass1+" "+phone1+" "+gender1+" "+lang1+" "+zip1+" "+info1);
+            }
+         </script>
+    </body>
+</html>

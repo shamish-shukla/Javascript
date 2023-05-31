@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript-Task-1</title>
+    <head></head>
+    <body>
+        <button onclick="date()">Show date</button>
+        <br>
+        <p id="demo2"></p>
+        <button onclick="time()">Show Time</button>
+        <p id="demo"></p>
+        <script>
+            function date()
+            {
+                const date1 = new Date()
+                let year = date1.getFullYear();
+                let month = date1.getMonth();
+                let day = date1.getDate();
+                document.getElementById("demo2").innerHTML = day+"/"+month+"/"+year;
+            }
+            function time()
+            {
+                const time1 = new Date();
+                document.getElementById("demo").innerHTML = time1;
+            }
+        </script>
+    </body>
+</html>
