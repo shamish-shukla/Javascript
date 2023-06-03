@@ -12,10 +12,7 @@
             function date()
             {
                 const date1 = new Date()
-                let year = date1.getFullYear();
-                let month = date1.getMonth();
-                let day = date1.getDate();
-                document.getElementById("demo2").innerHTML = day+"/"+month+"/"+year;
+                document.getElementById("demo2").innerHTML = date1.getDate()+"/"+date1.getMonth()+"/"+date1.getFullYear();
             }
             function time()
             {
