@@ -105,7 +105,46 @@
                 var lang1 = document.getElementById("Lanaguage").value;
                 var zip1 = document.getElementById("zip").value;
                 var info1 = document.getElementById("information").value;
-                alert(name1+" "+email1+" "+pass1+" "+phone1+" "+gender1+" "+lang1+" "+zip1+" "+info1);
+                //for the Name
+                if(name1.length < 2 || name1.length> 20)
+                {
+                    alert("Name length cannot be smaller than 2 and greater than 20");
+                }
+                //for Email
+                if (email1.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+                {
+                    alert("A Valid Email is required");
+                }
+                //for password
+                if (!pass1.match(/^.{5,15}$/))
+                {
+                    alert("Password length cannot be greater than 15 and less than 5");
+                }
+                //for phone Number
+                if (!phone1.match(/^[1-9][0-9]{9}$/))
+                {
+                    alert("Phone Number length must be equal to the length 10");
+                }
+                //for gender
+                if(gender1 == "")
+                {
+                    alert("Please select any one of the Gender Option");
+                }
+                //for Language
+                if(lang1 == "")
+                {
+                    alert("Please select any one of the Language");
+                }
+                //for the Zip Codes
+                if(zip1 == "")
+                {
+                   alert("Please provide the zip code");
+                }
+                //for the info1
+                if(info1 == "")
+                {
+                   alert("Please provide the informations about yourself");
+                }
             }
          </script>
     </body>
