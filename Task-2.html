@@ -3,21 +3,17 @@
     <title>JavaScript-Task-2</title>
     <head></head>
     <body>
-        <button onclick="forward()">Next</button>
-        <p id="demo"></p>
-        <button onclick="backward()">Previous</button>
-        <p id="demo1"></p>
+        <input type="button" value="Forward" onClick="Forward()" />
+        <input type="button" value="Backward" onClick="Backward()" />
         <script>
-            let count = 0;
-            function forward()
+            function Forward()
             {
-                count++;
-                document.getElementById("demo").innerHTML = "Page "+count;
+                window.history.forward();
             }
-            function backward()
+            function Backward()
             {
-                count--;
-                document.getElementById("demo1").innerHTML = "Page "+count;
+                window.history.back();
+                
             }
         </script>
     </body>
