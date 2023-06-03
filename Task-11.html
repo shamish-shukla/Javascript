@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript-Task-11</title>
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+                background-color: white;
+            }
+            .main{
+                background-color: lightsalmon;
+                padding: 20px;
+                width: 600px;
+            }
+            label{
+                color: white;
+            }
+            .first-rows input{
+                margin-left: 70px;
+            }
+            .second-rows input{
+                margin-left: 70px;
+            }
+            .third-rows input{
+                margin-left: 100px;
+            }
+            .fourth-rows input{
+                margin-left: 77px;
+            }
+            .fifth-rows input{
+                margin-left: 18px;
+            }
+            .sixth-rows input{
+                margin-left: 93px;
+            }
+            .seventh-rows input{
+                margin-left: 115px;
+            }
+            .eigth-rows input{
+                margin-left: 40px;
+            }
+            .ninth-rows textarea{
+                margin-left: 88px;
+            }
+            .tenth-rows input{
+                margin-left: 108px;
+            }
+            .eleventh-rows select{
+                margin-left: 87px;
+            }
+            .twelve-rows input{
+                margin-left: 23px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="first-rows">
+                <label>First Name:</label>
+                <input type="text"  id="first-name"/>
+                <span id="c1"></span>
+            </div>
+            <br>
+            <div class="second-rows">
+                <label>Last Name:</label>
+                <input type="text" id="last-name"/>
+                <span id="c2"></span>
+            </div>
+            <br>
+            <div class="third-rows" >
+                <label>Email:</label>
+                <input type="email" id="email"/>
+                <span id="c3"></span>
+            </div>
+            <br>
+            <div class="fourth-rows" >
+                <label>Password:</label>
+                <input type="password" id="password"/>
+                <span id="c4"></span>
+            </div>
+            <br>
+            <div class="fifth-rows">
+                <label>Re-enter Password:</label>
+                <input type="password" id="rpassword"/>
+                <span id="c5"></span>
+            </div>
+            <br>
+            <div class="sixth-rows" >
+                <label>Gender</label>
+                <input type="checkbox" id="gender"/> Male
+                <input type="checkbox" id="gender"/> Female
+                <span id="c6"></span>
+            </div>
+            <br>
+            <div class="seventh-rows">
+                <label>Age</label>
+                <input type="text" id="age"/>
+                <span id="c7"></span>
+            </div>
+            <br>
+            <div class="eigth-rows">
+                <label>Phone Number:</label>
+                <input type="text" id="phonenum"/>
+                <span id="c8"></span>
+            </div>
+            <br>
+            <div class="ninth-rows">
+                <label>Address</label>
+                <textarea id="address"></textarea>
+                <span id="c9"></span>
+            </div>
+            <br>
+            <div class="tenth-rows">
+                <label>State</label>
+                <input type="text" id="state"/>
+                <span id="c10"></span>
+            </div>
+            <br>
+            <div class="eleventh-rows">
+                <label>Country</label>
+                <select id="country">
+                    <option>England</option>
+                    <option>India</option>
+                    <option>Australia</option>
+                </select>
+                <span id="c11"></span>
+            </div>
+            <br>
+            <div class="twelve-rows">
+                <label>Language Known</label>
+                <input type="checkbox" id="language"/>English
+                <input type="checkbox" id="language"/>Kannada
+                <input type="checkbox" id="language"/>Hindi
+                <input type="checkbox" id="language"/>Telugu
+                <span id="c12"></span>
+            </div>
+            <br>
+            <input type="checkbox" />Hereby I declare all the given details are true
+            <p>Log in to <a href="#">Ethnus</a> website</p>
+            <button onClick="rate()">Register</button>
+        </div>
+        <script>
+            function rate()
+            {
+                var name1 = document.getElementById("first-name").value;
+                var name2 = document.getElementById("last-name").value;
+                var email1 = document.getElementById("email").value;
+                var password1 = document.getElementById("password").value;
+                var password2 = document.getElementById("rpassword").value;
+                var gender1 = document.getElementById("gender").value;
+                var age1 = document.getElementById("age").value;
+                var phonenum1 = document.getElementById("phonenum").value;
+                var address1 = document.getElementById("address").value;
+                var state1 = document.getElementById("state").value;
+                var country1 = document.getElementById("country").value;
+                var language1 = document.getElementById("language").value;
+                //for first Name
+                if(name1.length < 2 || name1.length> 10)
+                {
+                    document.getElementById("c1").innerHTML = "POOR";
+                }
+                //for last Name
+                if(name2.length < 2 || name2.length> 10)
+                {
+                    document.getElementById("c2").innerHTML = "POOR";
+                }
+                //for Email
+                if (email1.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+                {
+                    document.getElementById("c3").innerHTML = "POOR";
+                }
+                //for password
+                if (!password1.value.match(/^.{5,15}$/))
+                {
+                    document.getElementById("c4").innerHTML = "POOR";
+                }
+                //for rpassword
+                if (password1 != password2)
+                {
+                    document.getElementById("c5").innerHTML = "PORR OR MISMATCH";
+                }
+                //for gender
+                if(gender1 == "")
+                {
+                    document.getElementById("c6").innerHTML = "Select one";
+                }
+                //for phone Number
+                if (!phonenum1.value.match(/^[1-9][0-9]{9}$/))
+                {
+                    document.getElementById("c7").innerHTML = "POOR";
+                }
+                //for Age
+                if(age1 == "")
+                {
+                    document.getElementById("c8").innerHTML = "POOR";
+                }
+                //for address1
+                if(address1 == "")
+                {
+                    document.getElementById("c9").innserHTML = "POOR";
+                }
+                //for state
+                if(state1 == "")
+                {
+                    document.getElementById("c10").innerHTML = "POOR";
+                }
+                //for country
+                if(country1 == "")
+                {
+                    document.getElementById("c11").innerHTML = "Select any one country";
+                }
+                //for Language
+                if(language1 == "")
+                {
+                    document.getElementById("c12").innerHTML = "Select any one Lanaguage";
+                }
+
+            }
+        </script>
+    </body>
+</html>
