@@ -11,9 +11,11 @@
         <script>
             function date()
             {
-                const date1 = new Date();
-                const month = parseInt(date.getMonth()) + 1;
-                document.getElementById("demo2").innerHTML = date1.getDate()+"/"+month+"/"+date1.getFullYear();
+               const date1 = new Date()
+                let year = date1.getFullYear();
+                let month = parseInt(date1.getMonth()) + 1;
+                let day = date1.getDate();
+                document.getElementById("demo2").innerHTML = day+"/"+month+"/"+year;
             }
             function time()
             {
