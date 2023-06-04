@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript-Task-10</title>
+    </head>
+    <body>
+        <h3>Open the Console to view the output</h3>
+        <script>
+            //concat Method
+            const a = [10,20,30];
+            const b = [40,50,60];
+            const res = a.concat(b);
+            console.log("Concat Method is ",res);
+
+            //Copywithin Method
+            const m = res.copyWithin(3, 0, 6)
+            console.log("CopyWithin Method is ", m);
+
+            //Map Method
+            const new_m = m.map(myfun)
+            console.log("Map Method ", new_m);
+
+            function myfun(num)
+            {
+                return num * 1;
+            }
+
+            //every method
+            console.log("Every Method");
+            console.log(new_m.every(checkvalue));
+            function checkvalue(i)
+            {
+                return i>20;
+            }
+
+            //some method
+            console.log("Some Method");
+            console.log(new_m.some(check));
+            function check(i)
+            {
+                return i>20;
+            }
+
+            //Filter Method
+            console.log("Filter Method");
+            const new_arr = new_m.filter(checknum);
+            console.log(new_arr);
+
+            function checknum(x)
+            {
+                return x>=15;
+            }
+
+            //find Method
+            console.log("Find Method");
+            const new_a = new_m.find(checkfirst);
+            console.log(new_a);
+
+            function checkfirst(y)
+            {
+                return y>20;
+            }
+
+
+            //indexof Method
+            const str = "No welcome to the result of welcomethe hero in the world";
+            const pos = str.indexOf("welcome");
+            console.log("Index Method of ", pos);
+
+            //last indes of  Method
+            console.log("Last Index Method is ", str.lastIndexOf("welcome"));
+
+            //Push Method
+            const new_array = [10,20,30,10,20,30];
+            new_array.push(100);
+            console.log(new_array);
+
+            //pop method
+            new_array.pop();
+            console.log("Pop Method ", new_array);
+
+            //shift Method
+            new_array.shift();
+            console.log("Shift Method is ", new_array);
+            
+        </script>
+    </body>
+</html>
